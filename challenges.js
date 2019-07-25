@@ -82,9 +82,15 @@ sumNumbers([]) //=> 0
 // Your solution for 03-sumNumbers here:
 
 function sumNumbers(total){
-  for(let i = 0; i < total.length; i++) {
-    sum+= [i]
+  let sum = 0;
+  if (total.length > 0) {
+    for(let i = 0; i < total.length; i++) {
+    sum += total [i]
   }
+  } else {
+    return 0
+  }
+  return sum
 }
 
 /*-----------------------------------------------------------------
