@@ -112,6 +112,28 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
+function addList() {
+  var sum = 0
+  for (var i = 0; i < arguments.length; i++){
+    sum += arguments[i];
+  }
+  return sum;
+}
+
+
+
+
+// function addList(total){
+//   let sum = 0;
+//   if (total.length > 0) {
+//     for(let i = 0; i < total.length; i++) {
+//     sum += total [i]
+//   }
+//   } else {
+//     return 0
+//   }
+//   return sum
+// }
 
 
 /*-----------------------------------------------------------------
