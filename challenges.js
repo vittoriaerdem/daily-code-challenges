@@ -16,8 +16,6 @@ sayHello() //=> Hello!
 function sayHello() {
   return 'Hello!'
 }
-
-
 /*-----------------------------------------------------------------
 Challenge: 01-addOne
 
@@ -37,6 +35,7 @@ addOne(-5) //=> -4
 function addOne(n) {
   return n + 1;
 }
+
 /*-----------------------------------------------------------------
 Challenge: 02-addTwoNumbers
 
@@ -54,12 +53,15 @@ addTwoNumbers(10, -2) //=> 8
 addTwoNumbers(0, 0) //=> 0
 addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
-// Your solution for 02-addTwoNumbers here:
+// Your solution for 02-addTwoNumbers here: 
 
-
-
-
-
+function addTwoNumbers(a, b) {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b;
+  } else {
+    return NaN;
+  }
+}
 /*-----------------------------------------------------------------
 Challenge: 03-sumNumbers
 
@@ -79,9 +81,11 @@ sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
 
-
-
-
+function sumNumbers(total){
+  for(let i = 0; i < total.length; i++) {
+    sum+= [i]
+  }
+}
 
 /*-----------------------------------------------------------------
 Challenge: 04-addList
@@ -101,8 +105,6 @@ add(1,50,1.23) //=> 52.23
 add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
-
-
 
 
 
