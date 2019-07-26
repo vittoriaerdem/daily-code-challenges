@@ -120,9 +120,6 @@ function addList() {
   return sum;
 }
 
-
-
-
 // function addList(total){
 //   let sum = 0;
 //   if (total.length > 0) {
@@ -156,7 +153,17 @@ computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
 
+// function computeRemainder(num1, num2) {
+//   if(num2 > 0){
+//   return num1 % num2;
+// } else {
+//   return Infinity
+// }
+// };
 
+function computeRemainder(num1, num2){
+  return num2 === 0 ? Infinity: num1 % num2
+};
 
 
 
