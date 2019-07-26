@@ -174,8 +174,10 @@ Difficulty: basic
 
 Prompt:
 
-- Write a function called range that accepts two integers as arguments and returns an array of integers starting with the first argument up to one less than the second argument.
-- The range function must be called with the first argument less than or equal to the second argument, otherwise return the string "First argument must be less than second".
+- Write a function called range that accepts two integers as arguments and returns an 
+  array of integers starting with the first argument up to one less than the second argument.
+- The range function must be called with the first argument less than or equal to the 
+second argument, otherwise return the string "First argument must be less than second".
 
 Examples:
 
@@ -186,8 +188,18 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
-
+function range(num1, num2){
+  let arry = [];
+  if (num1 > num2) {
+    return "First argument must be less than second";
+  }
+  // } while (num1 <= num2){
+  //   num1 -= num2
+  for(let i = num1; i < num2; i++){
+    arry.push(i);
+  }
+  return arry;
+}
 
 
 /*-----------------------------------------------------------------
@@ -204,8 +216,6 @@ Examples:
 reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES" 
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
-
-
 
 
 
