@@ -221,7 +221,6 @@ function reverseUpcaseString(str){
   return str.split('').reverse().join('').toUpperCase()
 }
 
-
 /*-----------------------------------------------------------------
 Challenge: 08-removeEnds
 
