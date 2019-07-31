@@ -260,7 +260,7 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-// function charCOunty(str)
+// function charCount(str)
 //   let obj = {};
 //   let arry = str.split('')
 
@@ -322,7 +322,12 @@ isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
-
+// function isPalindrome(str){
+//   let str2 = str.split('').reverse().join('')
+//   if (str2 === str) {
+//   return true;
+// }  else {
+//   return false;
 
 /*-----------------------------------------------------------------
 Challenge: 12-hammingDistance
