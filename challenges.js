@@ -166,7 +166,6 @@ function computeRemainder(num1, num2){
 };
 
 
-
 /*-----------------------------------------------------------------
 Challenge: 06-range
 
@@ -201,7 +200,6 @@ function range(num1, num2){
   return arry;
 }
 
-
 /*-----------------------------------------------------------------
 Challenge: 07-reverseUpcaseString
 
@@ -233,14 +231,15 @@ Prompt:
 
 Examples:
 
-removeEnds('SEI Rocks!'); //=> "DI Rocks"
+removeEnds('SEI Rocks!'); //=> "EI Rocks"
 removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
 
-
-
+function removeEnds(str){
+  return str.length < 3 ? '' : str.substring(1, str.length -1);
+}
 
 /*-----------------------------------------------------------------
 Challenge: 09-charCount
@@ -252,7 +251,7 @@ Prompt:
 - Write a function named charCount that accepts a single string argument and returns an object that represents the count of each character in the string.
 - The returned object should have keys that represent the character with its value set to the how many times the character appears in the string argument.
 - Upper and lower case characters should be counted separately.
-- Space characters should be count too.
+- Space characters should be count too.`    ` 
 
 Examples:
 
@@ -261,9 +260,15 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
+// function charCOunty(str)
+//   let obj = {};
+//   let arry = str.split('')
 
+//   arry.forEach(character => {
+//     obj[character] ? obj[character] ++
+//   })
 
-
+//   return obj;
 
 /*-----------------------------------------------------------------
 Challenge: 10-formatWithPadding
@@ -287,9 +292,14 @@ formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
 
-
-
-
+const formatWithPadding = (str, pad, amt) => {
+  let str2 = str.toString()
+  if (str2.length >= amt){
+    return str2;
+  }
+  let leftPadding = pad.repeat (amt - str2.length);
+  return `${leftPadding}${str2}`
+  }
 
 /*-----------------------------------------------------------------
 Challenge: 11-isPalindrome
@@ -311,8 +321,6 @@ isPalindrome('A nut for a jar of tuna'); //=> true
 isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
-
-
 
 
 
