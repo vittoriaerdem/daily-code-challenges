@@ -260,15 +260,21 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-// function charCount(str)
-//   let obj = {};
-//   let arry = str.split('')
+function charCount(str) {
+  var result = {};
+  for (var i = 0; i < str.length; i++) {
+    var char = str.charAt(i);
+    // already seen this char?
+    if (result[char]) {
+      result[char]++;
+    } else {
+      result[char] = 1;
+    }
+  }
+  return result;
+}
 
-//   arry.forEach(character => {
-//     obj[character] ? obj[character] ++
-//   })
 
-//   return obj;
 
 /*-----------------------------------------------------------------
 Challenge: 10-formatWithPadding
@@ -322,12 +328,16 @@ isPalindrome(''); //=> true
 -----------------------------------------------------------------*/
 // Your solution for 11-isPalindrome here:
 
-// function isPalindrome(str){
-//   let str2 = str.split('').reverse().join('')
-//   if (str2 === str) {
-//   return true;
-// }  else {
-//   return false;
+
+function isPalindrome(str) {
+  str = str.toLowerCase();
+  // loop to replace spaces
+  while (str.includes(' ')) str = str.replace(' ', '');
+  for (var i = 0; i < Math.floor(str.length / 2); i++) {
+    if (str.charAt(i) !== str.charAt(str.length - i - 1)) return false;
+  }
+  return true;
+}
 
 /*-----------------------------------------------------------------
 Challenge: 12-hammingDistance
